@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint . && echo All good!",
-    "test": "./node_modules/.bin/mocha"
+    "test-org": "./node_modules/.bin/mocha",
+    "test": "mocha --grep ch1-q1"
   },
   "license": "MIT",
   "devDependencies": {
