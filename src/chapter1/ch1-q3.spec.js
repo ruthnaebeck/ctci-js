@@ -29,8 +29,8 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns true for unique string: '${arg}'`, function() {
-        let expected = arg.replace(/ /g, '%20').split('');
-        expect(func(arg.split(''))).to.eql(expected);
+        let expected = arg.replace(/ /g, '%20');
+        expect(func(arg)).to.eql(expected);
       });
 
     });
