@@ -14,7 +14,7 @@ for (let key in funcs) {
     ].forEach(args => {
 
       it(`returns true for strings that are permutations: '${args[0]}' & '${args[1]}'`, function() {
-        expect(func(args[0].split(''), args[1].split(''))).to.be.true;
+        expect(func(args[0], args[1])).to.be.true;
       });
 
     });
@@ -27,7 +27,7 @@ for (let key in funcs) {
     ].forEach(args => {
 
       it(`returns false for strings that are not permutations: '${args[0]}' & '${args[1]}'`, function() {
-        expect(func(args[0].split(''), args[1].split(''))).to.be.false;
+        expect(func(args[0], args[1])).to.be.false;
       });
 
     });
