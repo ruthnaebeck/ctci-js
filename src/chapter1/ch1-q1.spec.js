@@ -14,7 +14,7 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns true for unique string: '${arg}'`, function() {
-        expect(func(arg.split(''))).to.be.true;
+        expect(func(arg)).to.be.true;
       });
 
     });
@@ -28,7 +28,7 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns false for string with dupes: '${arg}'`, function() {
-        expect(func(arg.split(''))).to.be.false;
+        expect(func(arg)).to.be.false;
       });
 
     });
