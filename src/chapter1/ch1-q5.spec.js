@@ -41,7 +41,7 @@ for (let key in funcs) {
     ].forEach(args => {
 
       it(`returns false for strings that are more than one edit: '${args[0]}' & '${args[1]}'`, function() {
-        expect(func(args[0].split(''), args[1].split(''))).to.be.false;
+        expect(func(args[0], args[1])).to.be.false;
       });
 
     });
