@@ -26,7 +26,7 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns true for palindromic string: '${arg}'`, function() {
-        expect(func(arg.split(''))).to.be.true;
+        expect(func(arg)).to.be.true;
       });
 
     });
@@ -38,7 +38,7 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns false for non-palindromic string: '${arg}'`, function() {
-        expect(func(arg.split(''))).to.be.false;
+        expect(func(arg)).to.be.false;
       });
 
     });
