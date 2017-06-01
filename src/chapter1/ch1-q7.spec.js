@@ -13,9 +13,9 @@ for (let key in funcs) {
   describe('ch1-q7: ' + key, function() {
 
     it('throws an error when null/undefined/empty matrix', function() {
-      expect(() => func(null)).to.throw('invalid matrix');
-      expect(() => func(undefined)).to.throw('invalid matrix');
-      expect(() => func([])).to.throw('invalid matrix');
+      expect(() => func(null)).to.throw(Error);
+      expect(() => func(undefined)).to.throw(Error);
+      expect(() => func([])).to.throw(Error);
     });
 
     it('returns matrix unchanged with 1,1 matrix', function() {
