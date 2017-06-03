@@ -7,9 +7,9 @@ for (let key in funcs) {
   describe('ch1-q9: ' + key, function() {
 
     it('throws an error when either string is null/undefined/empty', function() {
-      expect(() => func(null, 'abc')).to.throw('invalid input');
-      expect(() => func('abc', undefined)).to.throw('invalid input');
-      expect(() => func('', 'abc')).to.throw('invalid input');
+      expect(() => func(null, 'abc')).to.throw(Error);
+      expect(() => func('abc', undefined)).to.throw(Error);
+      expect(() => func('', 'abc')).to.throw(Error);
     });
 
     it('returns false when strings are different lengths', function() {
@@ -26,7 +26,7 @@ for (let key in funcs) {
         let rStr = str.substring(i) + str.substring(0, i);
 
         it(`returns true for rotated string ${rStr}`, function() {
-          expect(func(rStr, str)).to.be.true;
+          expect(func(str, rStr)).to.be.true;
         });
 
       }
@@ -35,7 +35,7 @@ for (let key in funcs) {
         let rStr = str.substring(i) + reverseStr.substring(0, i);
 
         it(`returns false for non-rotated string ${rStr}`, function() {
-          expect(func(rStr, str)).to.be.false;
+          expect(func(str, rStr)).to.be.false;
         });
 
       }
