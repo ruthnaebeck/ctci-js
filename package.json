@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint . && echo All good!",
     "test-org": "./node_modules/.bin/mocha",
-    "test": "mocha --grep ch1-q9"
+    "test": "mocha --grep ch2-q1"
   },
   "license": "MIT",
   "devDependencies": {
