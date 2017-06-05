@@ -8,14 +8,14 @@ for (let key in funcs) {
   describe('ch2-q2: ' + key, function() {
 
     it('throws an error if list is not an array', function() {
-      expect(() => func(null)).to.throw('invalid list');
-      expect(() => func(undefined)).to.throw('invalid list');
+      expect(() => func(null)).to.throw(Error);
+      expect(() => func(undefined)).to.throw(Error);
     });
 
     it('throws an error if list is shorter than k', function() {
-      expect(() => func(helpers.arrayToLinkedList([1]), 1)).to.throw('list is not long enough');
-      expect(() => func(helpers.arrayToLinkedList([1, 2, 3]), 3)).to.throw('list is not long enough');
-      expect(() => func(helpers.arrayToLinkedList([1, 2, 3]), 4)).to.throw('list is not long enough');
+      expect(() => func(helpers.arrayToLinkedList([1]), 1)).to.throw(Error);
+      expect(() => func(helpers.arrayToLinkedList([1, 2, 3]), 3)).to.throw(Error);
+      expect(() => func(helpers.arrayToLinkedList([1, 2, 3]), 4)).to.throw(Error);
     });
 
     [
