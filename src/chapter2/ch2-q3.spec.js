@@ -8,9 +8,9 @@ for (let key in funcs) {
   describe('ch2-q3: ' + key, function() {
 
     it('throws an error if node is invalid', function() {
-      expect(() => func(null)).to.throw('invalid node');
-      expect(() => func(undefined)).to.throw('invalid node');
-      expect(() => func(helpers.arrayToLinkedList([11]))).to.throw('invalid node');
+      expect(() => func(null)).to.throw(Error);
+      expect(() => func(undefined)).to.throw(Error);
+      expect(() => func(helpers.arrayToLinkedList([11]))).to.throw(Error);
     });
 
     it('can delete multiple in long list', function() {
