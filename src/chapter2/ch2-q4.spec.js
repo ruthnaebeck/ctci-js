@@ -47,10 +47,20 @@ for (let key in funcs) {
 
       it(`partitioning list ${context.list} around ${context.value}`, function() {
         let list = helpers.arrayToLinkedList(context.list);
-        expect(helpers.linkedListToArray(func(list, context.value))).to.eql(context.expected);
+        let newList = helpers.linkedListToArray(func(list, context.value));
+        expect(arrCentered(newList, context.value)).to.eql(true);
       });
 
     });
 
   });
+}
+
+function arrCentered(arr, val){
+  var right = false;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] >= val) right = true;
+    else if(right && arr[i] < val) return false;
+  }
+  return true;
 }
